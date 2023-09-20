@@ -1,0 +1,84 @@
+.one {
+	width: 100%;
+	height: 100px;
+	background-color: #666;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	align-items: left;
+	text-align: right;
+	text-overflow: clip;
+}
+
+.two {
+	width: 100px;
+	height: calc(100% - 200px);
+	background-color: #a6ff00;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+
+.three {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	right: 100px;
+	bottom: 100px;
+	min-height: auto;
+	background-color: #ffffff;
+}
+
+.four {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	height: calc(100% - 100px);
+	width: 100px;
+	background-color: #5e5e5e;
+}
+
+.five {
+	width: calc(100% - 200px);
+	height: auto;
+	background-color: #c330cd;
+	position: absolute;
+	bottom: 100px;
+	left: 100px;
+	right: 100px;
+	text-align: center;
+}
+
+.six {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100px;
+	width: calc(100% - 100px);
+	background-color: #00ffe1;
+}
+
+.x {
+	position: absolute;
+	top: 50%;
+	height: 40px;
+	width: 100px;
+	background-color: #ffffff;
+}
+
+.y {
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	height: 40px;
+	width: 100px;
+	background-color: #ffffff;
+}
+
+.leftaligntext {
+	position: relative;
+	position: absolute;
+	left: 49%;
+	width: 50%;
+	text-align: right;
+}
