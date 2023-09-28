@@ -1,0 +1,24 @@
+.piccaption{
+	right: 0;
+	width: 320px;
+	flex-direction: column;
+	margin: 5px;
+	align-content: center;
+	text-align: center;
+}
+
+.captionspace{
+	grid-area: caption;
+	float: left;
+	width: 275px;
+	margin: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.listform{
+	margin: 5px;
+	right: 0%;
+	width: 150px;
+}

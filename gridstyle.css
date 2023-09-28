@@ -17,6 +17,7 @@
 .piccaption{
 	right: 0;
 	width: 320px;
+	flex-direction: column;
 	margin: 5px;
 	align-content: center;
 	text-align: center;
@@ -31,17 +32,17 @@
 	background-color: white;
 }
 
+.listform{
+	margin: 5px;
+	right: 0%;
+	width: 150px;
+}
+
 .textmargin{
 	overflow-wrap: break-word;
 	grid-area: textmarg;
 	width: 750px;
 	margin: 5px;
-}
-
-.listform{
-	margin: 5px;
-	right: 0%;
-	width: 150px;
 }
 
 .one {
@@ -122,12 +123,4 @@
 	min-height: 100px;
 	background-color: pink;
 	align-self: flex-start;
-}
-
-.textform{
-	grid-area: textform;
-}
-
-.y{
-	float: left;
 }
