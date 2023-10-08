@@ -9,6 +9,7 @@
 
 .captionspace{
 	grid-area: caption;
+	text-align: center;
 	float: left;
 	width: auto;
 	margin: 20px;

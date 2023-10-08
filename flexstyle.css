@@ -29,7 +29,7 @@
 	align-items: right;
 	text-align: right;
 	overflow-wrap: break-word;
-	width: 300px;
+	max-width: 150px;
 	min-height: 500px;
 	height: auto;
 	background-color: brown;
@@ -49,7 +49,7 @@
 .four {
 	text-align: right;
 	overflow-wrap: break-word;
-	width: 300px;
+	max-width: 150px;
 	min-height: 600px;
 	height: auto;
 	background-color: blue;
@@ -58,7 +58,6 @@
 .five {
 	align-items: center;
 	text-align: center;
-	min-height: 60px;
 	background-color: cyan;
 }
 
