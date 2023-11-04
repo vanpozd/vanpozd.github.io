@@ -1,4 +1,4 @@
-.piccaption{
+.piccaption {
 	right: 0;
 	width: 320px;
 	flex-direction: column;
@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-.captionspace{
+.captionspace {
 	grid-area: caption;
 	text-align: center;
 	float: left;
@@ -18,8 +18,33 @@
 	background-color: white;
 }
 
-.listform{
+.listform {
 	margin: 5px;
 	right: 0%;
 	width: 150px;
+}
+
+.rectanglechecker {
+	display: flex;
+	flex-direction: column;
+}
+
+.rectsidetaker {
+	display: flex;
+	flex-direction: row;
+}
+
+/* .rectbutton{
+	
+} */
+
+@media screen and (max-width: 768px) {
+	.piccaption {
+		right: 0;
+		width: 213px;
+		flex-direction: column;
+		margin: 5px;
+		align-content: center;
+		text-align: center;
+	}
 }

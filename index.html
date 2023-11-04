@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,24 @@
 	<link rel="stylesheet" href="basicstyle.css">
 	<link rel="stylesheet" href="flexstyle.css">
 </head>
+
 <body>
 	<div class="vert-flex-cont">
 		<div class="one">
 			<h1 class="captionspace">Main page</h1>
-			<p>Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють загальному покращенню	фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+			<p id="Block1text">Це текст із 1 блоку, він поміняний місцями із текстом з 6 блоку, текст написано для
+				перевірки коректності
+				роботи скриптів.</p>
 		</div>
 		<div class="gor-flex-cont">
 			<div class="vert-flex-cont">
 				<div class="gor-flex-cont">
 					<div class="two">
-						<p>Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють загальному покращенню	фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+						<p id="Block2text">Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють
+							загальному
+							покращенню фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити
+							м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну
+							вагу.</p>
 					</div>
 					<div class="vert-flex-cont">
 						<div class="three">
@@ -37,27 +44,86 @@
 								</ol>
 							</div>
 							<map name="imagemap">
-								<area shape="rect" coords="0,0,320,213" href="https://en.wikipedia.org/wiki/Cat" alt="cat">
+								<area shape="rect" coords="0,0,320,213" href="https://en.wikipedia.org/wiki/Cat"
+									alt="cat">
 							</map>
 							<div class="piccaption">
-								<img src="cat.jpeg" alt="cat" width="320" height="213" usemap="#imagemap">
+								<img class="cutecatpic" src="cat.jpeg" alt="cat" width="320" height="213"
+									usemap="#imagemap">
 								<a href="https://en.wikipedia.org/wiki/Cat">cat</a>
+							</div>
+							<div>
+								<h3>Обрахунок площі правильного п'ятикутника</h3>
+								<span>Площа правильного п'ятикутника зі стороною 5 та висотою 4 = <span
+										id="pentagsquare">?</span></span>
+							</div>
+							<div class="rectanglechecker">
+								<h3>Перевірка трикутника</h3>
+								<form id="triangleForm">
+									<label for="sideA">Сторона A:</label>
+									<input type="number" id="sideA" required>
+									<br>
+									<label for="sideB">Сторона B:</label>
+									<input type="number" id="sideB" required>
+									<br>
+									<label for="sideC">Сторона C:</label>
+									<input type="number" id="sideC" required>
+									<br>
+									<button type="button" id="checkTriangle">Перевірити трикутник</button>
+								</form>
+							</div>
+							<div>
+								<h3>Збереження верхнього регістру 4 блоку</h3>
+								<form>
+									<label for="uppercaseFirstLetters">Встановити верхній регістр перших літер
+										слів</label>
+									<input type="checkbox" id="uppercaseFirstLettersCheckbox">
+								</form>
+								<button id="saveSettingsButton">Зберегти налаштування</button>
+							</div>
+							<div class="changecontentcont">
+								<h3>Text redactor</h3>
+								<ul class="listform" id="containerList">
+									<li data-container="1">Контейнер 1</li>
+									<li data-container="2">Контейнер 2</li>
+									<li data-container="4">Контейнер 4</li>
+									<li data-container="5">Контейнер 5</li>
+									<li data-container="6">Контейнер 6</li>
+								</ul>
+								<div class="editor">
+									<textarea class="textred" id="textEditor"
+										placeholder="Редагувати текст..."></textarea>
+									<button id="saveButton">Зберегти</button>
+									<button id="clearButton">Скасувати</button>
+								</div>
 							</div>
 						</div>
 						<div class="five">
-							<p>Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють загальному покращенню	фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+							<p id="Block5text">Фізичні вправи є необхідною складовою здорового способу життя. Вони
+								сприяють загальному
+								покращенню фізичного і психічного здоров'я. Регулярна фізична активність допомагає
+								зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати
+								оптимальну вагу.</p>
 						</div>
 					</div>
 				</div>
 				<div class="six">
 					<h2 class="captionspace">Made with flexbox</h2>
-					<p>Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють загальному покращенню	фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+					<p id="Block6text">Це текст із 6 блоку, він поміняний місцями із текстом з 1 блоку, текст написано
+						для перевірки
+						коректності роботи скриптів.
+					</p>
 				</div>
 			</div>
 			<div class="four">
-				<p>Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють загальному покращенню	фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+				<p id="Block4text">Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють
+					загальному покращенню
+					фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки,
+					покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
 			</div>
 		</div>
 	</div>
+	<script src="sitescript.js"></script>
 </body>
+
 </html>
