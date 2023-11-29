@@ -2,209 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Editor with Effects</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        p {
-            overflow-wrap: break-word;
-            max-width: 800px;
-        }
-
-        .textshowcase {
-            padding: 10px;
-            border: 2px solid #333;
-            text-align: center;
-            font-size: 20px;
-            background-color: #fff;
-        }
-
-        #texttoshow1 {
-            position: relative;
-            line-height: 23px;
-            bottom: 0;
-            margin: 0;
-            padding-left: 2px;
-            color: red;
-        }
-
-        #texttoshow2 {
-            position: relative;
-            line-height: 23px;
-            bottom: 23px;
-            margin: 0;
-            padding-left: 5px;
-            color: black;
-        }
-
-        #texttoshow3 {
-            position: relative;
-            line-height: 23px;
-            bottom: 46px;
-            margin: 0;
-            padding-left: 8px;
-            color: blue;
-        }
-
-        #textEditor {
-            border: 2px solid #333;
-            padding: 20px;
-            text-align: center;
-            font-size: 20px;
-            background-color: #fff;
-        }
-
-        #effectButton {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        .glitchtextareainput {
-            border: 2px solid #333;
-            line-height: 23px;
-            overflow-wrap: break-word;
-            max-width: 800px;
-        }
-
-        #timersetter {
-            width: 40px;
-            margin-left: 5px;
-        }
-
-        #textcolor1 {
-            margin-left: 5px;
-        }
-
-        #textcolor2 {
-            margin-left: 5px;
-        }
-
-        .settingsmenu {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .colorntimemenu {
-            display: flex;
-            flex-direction: row;
-            padding: 8px;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cute cat site</title>
+	<link rel="stylesheet" href="basicstyle.css">
+	<link rel="stylesheet" href="flexstyle.css">
 </head>
 
 <body>
-    <div>
-        <div class="textshowcase">
-            <p id="texttoshow1">Спроба написати текст</p>
-            <p id="texttoshow2">Спроба написати текст</p>
-            <p id="texttoshow3">Спроба написати текст</p>
-        </div>
-        <div id="textEditor">
-            <p class="glitchtextareainput" id="editableText" contenteditable="true"></p>
-            <div class="settingsmenu">
-                <button id="effectButton" onclick="applyTextEffect()">Застосувати ефект</button>
-                <div class="colorntimemenu">
-                    <input type="color" id="textcolor1" value="#ff0000">
-                    <input type="color" id="textcolor2" value="#0000ff">
-                    <span><input type="number" id="timersetter" value="2">с.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-
-        const button = document.getElementById('yourButtonId');
-        const ElementTextToGlitch = document.getElementById('editableText');
-        var colorPicker1 = document.getElementById('textcolor1');
-        var colorPicker2 = document.getElementById('textcolor2');
-
-        function applyTextEffect() {
-            var TextGlitch1 = document.getElementById('texttoshow1');
-            var TextGlitch2 = document.getElementById('texttoshow2');
-            var TextGlitch3 = document.getElementById('texttoshow3');
-            var TimerElement = document.getElementById('timersetter');
-
-            var copiedText = ElementTextToGlitch.innerText;
-            var textHeight = ElementTextToGlitch.offsetHeight;
-            var TimerValue = TimerElement.value * 1000;
-
-            ElementTextToGlitch.textContent = '';
-            TextGlitch1.style.color = colorPicker1.value;
-            TextGlitch3.style.color = colorPicker2.value;
-            TextGlitch1.textContent = copiedText;
-            TextGlitch2.textContent = copiedText;
-            TextGlitch3.textContent = copiedText;
-            setTimeout(function () {
-                TextGlitch1.style.color = '#ff000000';
-                TextGlitch3.style.color = '#0000ff00';
-            }, TimerValue);
-            saveDataToServer();
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'saveData.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-
-            // Відправляємо дані на сервер
-            xhr.send(JSON.stringify({ text: copiedText }));
-
-            // Здійснюємо GET-запит для отримання збережених даних (при необхідності)
-            // var xhrGet = new XMLHttpRequest();
-            // xhrGet.open('GET', 'saveData.php', true);
-            // xhrGet.onreadystatechange = function () {
-            //     if (xhrGet.readyState === 4 && xhrGet.status === 200) {
-            //         var savedData = JSON.parse(xhrGet.responseText);
-            //         console.log('Отримано дані з сервера:', savedData);
-            //         // Обробка отриманих даних (якщо необхідно)
-            //     }
-            // };
-            // xhrGet.send();
-        }
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter') {
-                applyTextEffect();
-                ElementTextToGlitch.textContent = '';
-            }
-        });
-
-        function saveDataToServer() {
-            var dataToSave = {
-                text: ElementTextToGlitch.innerText,
-                color1: colorPicker1.value,
-                color2: colorPicker2.value,
-                timer: document.getElementById('timersetter').value
-            };
-
-            // Використовуємо AJAX для відправлення даних на сервер
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'save_data.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    console.log('Дані успішно збережені на сервері.');
-                }
-            };
-
-            xhr.send(JSON.stringify(dataToSave));
-        }
-
-    </script>
-
+	<div class="vert-flex-cont">
+		<div class="one">
+			<h1 class="captionspace">Main page</h1>
+			<p id="Block1text">Це текст із 1 блоку, він поміняний місцями із текстом з 6 блоку, текст написано для
+				перевірки коректності
+				роботи скриптів.</p>
+		</div>
+		<div class="gor-flex-cont">
+			<div class="vert-flex-cont">
+				<div class="gor-flex-cont">
+					<div class="two">
+						<p id="Block2text">Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють
+							загальному
+							покращенню фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити
+							м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну
+							вагу.</p>
+					</div>
+					<div class="vert-flex-cont">
+						<div class="three">
+							<div class="listform">
+								<ul>
+									<li><a href="page1.html">Flex page</a></li>
+									<li><a href="page2.html">Table page</a></li>
+									<li><a href="page3.html">Grid page</a></li>
+								</ul>
+							</div>
+							<div class="listform">
+								<ol class="listform">
+									<li>Перший пункт</li>
+									<li>Другий пункт</li>
+									<li>Третій пункт</li>
+								</ol>
+							</div>
+							<map name="imagemap">
+								<area shape="rect" coords="0,0,320,213" href="https://en.wikipedia.org/wiki/Cat"
+									alt="cat">
+							</map>
+							<div class="piccaption">
+								<img class="cutecatpic" src="cat.jpeg" alt="cat" width="320" height="213"
+									usemap="#imagemap">
+								<a href="https://en.wikipedia.org/wiki/Cat">cat</a>
+							</div>
+							<div>
+								<h3>Обрахунок площі правильного п'ятикутника</h3>
+								<span>Площа правильного п'ятикутника зі стороною 5 та висотою 4 = <span
+										id="pentagsquare">?</span></span>
+							</div>
+							<div class="rectanglechecker">
+								<h3>Перевірка трикутника</h3>
+								<form id="triangleForm">
+									<label for="sideA">Сторона A:</label>
+									<input type="number" id="sideA" required>
+									<br>
+									<label for="sideB">Сторона B:</label>
+									<input type="number" id="sideB" required>
+									<br>
+									<label for="sideC">Сторона C:</label>
+									<input type="number" id="sideC" required>
+									<br>
+									<button type="button" id="checkTriangle">Перевірити трикутник</button>
+								</form>
+							</div>
+							<div>
+								<h3>Збереження верхнього регістру 4 блоку</h3>
+								<form>
+									<label for="uppercaseFirstLetters">Встановити верхній регістр перших літер
+										слів</label>
+									<input type="checkbox" id="uppercaseFirstLettersCheckbox">
+								</form>
+								<button id="saveSettingsButton">Зберегти налаштування</button>
+							</div>
+							<div class="changecontentcont">
+								<h3>Text redactor</h3>
+								<ul class="listform" id="containerList">
+									<li data-container="1">Контейнер 1</li>
+									<li data-container="2">Контейнер 2</li>
+									<li data-container="4">Контейнер 4</li>
+									<li data-container="5">Контейнер 5</li>
+									<li data-container="6">Контейнер 6</li>
+								</ul>
+								<div class="editor">
+									<textarea class="textred" id="textEditor"
+										placeholder="Редагувати текст..."></textarea>
+									<button id="saveButton">Зберегти</button>
+									<button id="clearButton">Скасувати</button>
+								</div>
+							</div>
+						</div>
+						<div class="five">
+							<p id="Block5text">Фізичні вправи є необхідною складовою здорового способу життя. Вони
+								сприяють загальному
+								покращенню фізичного і психічного здоров'я. Регулярна фізична активність допомагає
+								зміцнити м'язи та кістки, покращити кровообіг, збільшити витрату калорій і підтримувати
+								оптимальну вагу.</p>
+						</div>
+					</div>
+				</div>
+				<div class="six">
+					<h2 class="captionspace">Made with flexbox</h2>
+					<p id="Block6text">Це текст із 6 блоку, він поміняний місцями із текстом з 1 блоку, текст написано
+						для перевірки
+						коректності роботи скриптів.
+					</p>
+				</div>
+			</div>
+			<div class="four">
+				<p id="Block4text">Фізичні вправи є необхідною складовою здорового способу життя. Вони сприяють
+					загальному покращенню
+					фізичного і психічного здоров'я. Регулярна фізична активність допомагає зміцнити м'язи та кістки,
+					покращити кровообіг, збільшити витрату калорій і підтримувати оптимальну вагу.</p>
+			</div>
+		</div>
+	</div>
+	<script src="sitescript.js"></script>
 </body>
 
 </html>
