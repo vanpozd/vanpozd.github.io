@@ -1,0 +1,297 @@
+.piccaption {
+	right: 0;
+	width: 320px;
+	flex-direction: column;
+	margin: 5px;
+	align-content: center;
+	text-align: center;
+}
+
+.captionspace {
+	grid-area: caption;
+	text-align: center;
+	float: left;
+	width: auto;
+	margin: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.listform {
+	margin: 5px;
+	right: 0%;
+	width: 150px;
+}
+
+.rectanglechecker {
+	display: flex;
+	flex-direction: column;
+}
+
+.rectsidetaker {
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+	.piccaption {
+		right: 0;
+		width: 213px;
+		flex-direction: column;
+		margin: 5px;
+		align-content: center;
+		text-align: center;
+	}
+}
+
+.vert-flex-cont {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.gor-flex-cont {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.textmargin {
+	overflow-wrap: break-word;
+	width: 750px;
+	margin: 5px;
+}
+
+.one {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: right;
+	min-height: 100px;
+	background-color: gray;
+}
+
+.two {
+	align-items: right;
+	text-align: right;
+	overflow-wrap: break-word;
+	max-width: 150px;
+	min-height: 500px;
+	height: auto;
+	background-color: brown;
+}
+
+.three {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	min-height: 500px;
+	min-width: 1000px;
+	background-color: yellow;
+	height: 100%;
+}
+
+.four {
+	text-align: right;
+	overflow-wrap: break-word;
+	max-width: 150px;
+	min-height: 600px;
+	height: auto;
+	background-color: blue;
+}
+
+.five {
+	align-items: center;
+	text-align: center;
+	background-color: cyan;
+}
+
+.six {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: right;
+	min-height: 100px;
+	background-color: pink;
+}
+
+.cutecatpic {
+	width: 320px;
+	height: 213px;
+}
+
+.changecontentcont {
+	background-color: yellow;
+}
+
+.changecontentcont h3 {
+	text-align: center;
+}
+
+.editor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.textred {
+	min-width: 300px;
+	min-height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.one {
+		overflow-y: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: right;
+		min-height: 50px;
+		background-color: gray;
+		font-size: 10;
+		padding: 8px;
+	}
+
+	.two {
+		align-items: right;
+		text-align: right;
+		overflow-wrap: break-word;
+		max-width: 100px;
+		min-height: 250px;
+		height: auto;
+		background-color: brown;
+		font-size: 10;
+		padding: 8px;
+	}
+
+	.three {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		justify-content: start;
+		align-content: start;
+		min-height: 250px;
+		background-color: yellow;
+		height: 100%;
+		font-size: 10;
+	}
+
+	.four {
+		text-align: right;
+		overflow-wrap: break-word;
+		max-width: 100px;
+		min-height: 300px;
+		height: auto;
+		background-color: blue;
+		font-size: 10;
+		padding: 8px;
+	}
+
+	.five {
+		align-items: center;
+		text-align: center;
+		background-color: cyan;
+		font-size: 10;
+	}
+
+	.six {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: right;
+		min-height: 50px;
+		background-color: pink;
+		font-size: 10;
+		padding: 8px;
+	}
+
+	.cutecatpic {
+		width: 213px;
+		height: 142px;
+
+	}
+}
+
+#container {
+	position: relative;
+	width: 100%;
+	/* Full width of the container */
+	height: 500px;
+	/* Temporary height for the container */
+	border: 1px solid #000;
+	/* Border to visualize the container */
+}
+
+#work {
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 350px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #f0f0f0;
+}
+
+#anim {
+	position: absolute;
+	width: calc(45% - 10px);
+	height: calc(85% - 50px);
+	border: 5px solid red;
+	bottom: 0;
+	left: calc(50% - calc(45% - 10px)/2);
+}
+
+.tophalf{
+	width: 100%;
+	height: 50%;
+	background-image: url('bckg1.png');
+	background-size: 254px 254px;
+	background-repeat: repeat;
+}
+
+.bothalf{
+	width: 100%;
+	height: 50%;
+	background-image: url('bckg2.png');
+	background-size: 254px 254px;
+	background-repeat: repeat;
+}
+
+#start {
+	vertical-align: middle;
+}
+
+#controls {
+	width: 100%;
+	height: calc(10% + 40px);
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+}
+
+#consoleout {
+	width: 50%;
+	height: 48px;
+	border: 1px solid #4f1ce8;
+	overflow: auto;
+	white-space: pre-line
+}
+
+#reload {
+	display: none;
+}
+
+button {
+	margin: 5px;
+}
