@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<style>
+ header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+ }
+
+ nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+ }
+
+ nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+ }
+
+ nav a:hover {
+  color: #ccc;
+ }
+
+ .photo-example {
+  background-image: url('https://via.placeholder.com/150');
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+ }
+
+ .photo-container {
+  text-align: center;
+ }
+
+ .gallery {
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .form-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+</style>
+<body>
+ <!-- Header -->
+ <header>
+   <h1>Сайт для Нікусічкі</h1>
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="/book">Products</a>
+    <a href="/book">About me</a>
+    <a href="/book">Etc.</a>
+   </nav>
+ </header>
+ <!-- Main body -->
+ <div>
+  <h2>Content</h2>
+  <div class="gallery">
+   <div class="photo-container">
+    <div class="photo-example"></div>
+    <p>Some text</p>
+   </div>
+   <div class="photo-container">
+    <div class="photo-example"></div>
+    <p>Some text</p>
+   </div>
+   <div class="photo-container">
+    <div class="photo-example"></div>
+    <p>Some text</p>
+   </div>
+  </div>
+  <form action="tgbotmessage" class="form-cont">
+   <input type="tel" placeholder="Enter your phone number">
+   <input type="text" name="message" placeholder="Enter your message">
+   <button type="submit">Send</button>
+  </form>
+ </div>
+</body>
+
+</html>
