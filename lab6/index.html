@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pozdniakov Ivan.IP-23.Lab6.Variant14</title>
+</head>
+
+<body>
+	<button id="getdata">Отримати дані</button>
+	<div id="userscont">
+		<div class="userinfocont">
+			<img src="" alt="User image">
+			<span class="username">sdsd</span>
+			<span class="useremail">sdsd</span>
+			<span class="usercity">ssss</span>
+			<span class="userpostmail">sdsds</span>
+		</div>
+	</div>
+</body>
+<script>
+	let userscont = document.getElementById('userscont');
+	let getdatabut = document.querySelector('.userinfocont');
+
+	document.addEventListener('DOMContentLoaded', () => {
+		userscont.style.display = 'none';
+	});
+
+	getdatabut.addEventListener('click', () => {
+		userscont.style.display = 'block';
+		var body = document.querySelector('body');
+		body.style.backgroundColor = 'lightblue';
+	});
+</script>
+
+</html>

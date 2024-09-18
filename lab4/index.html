@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pozdniakov Ivan.IP-23.Lab1.Variant14</title>
+	<title>Pozdniakov Ivan.IP-23.Lab4.Variant4</title>
 </head>
 
 <body>
@@ -13,11 +13,12 @@
 	<h3>Освіта:</h3>
 	<p>Народився у місті Донецьк.</p>
 	<p>Дата народження: 14.02.2005</p>
-	<p>Навчався у школі №3 "Сузірʼя", після чого останні 3 класи закінчував у технічному ліцеї НТУУ "КПІ" імені Ігоря
+	<p id="schoolparagraph">Навчався у школі №3 "Сузірʼя", після чого останні 3 класи закінчував у технічному ліцеї НТУУ
+		"КПІ" імені Ігоря
 		Сікорського.</p>
 	<br>
 	<div>
-		<h3>Хоббі:</h3>
+		<h3 class="hobbycaption">Хоббі:</h3>
 		<ul>
 			<li>Спорт</li>
 			<li>Проектування та збирання РЕА</li>
@@ -38,7 +39,14 @@
 		<area shape="rect" coords="0,0,1080,600" href="https://kyivcity.gov.ua/" alt="Kyiv site">
 	</map>
 	<img src="kyivimg.png" alt="Kyiv image" class="kyivimg" width="1080" height="600" usemap="#imagemap">
+	<div class="buttonscont">
+		<button id="addbutton">Додати</button>
+		<button id="zoominbutton">Збільшити</button>
+		<button id="zoomoutbutton">Зменшити</button>
+		<button id="deletebutton">Видалити</button>
+	</div>
 
 </body>
+<script src="scripts.js"></script>
 
 </html>
