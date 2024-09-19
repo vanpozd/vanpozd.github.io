@@ -1,47 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pozdniakov Ivan.IP-23.Lab5.Variant14</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
-<style>
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		margin: 0;
-	}
-
-	.formcont {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 400px;
-	}
-
-	.rowhandler {
-		display: flex;
-		flex-direction: row;
-	}
-</style>
-
 <body>
 	<form class="formcont">
 		<h2>Форма для заповнення</h2>
 		<div class="rowhandler">
 			<label for="name">ПІБ:</label>
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" placeholder="Призвище І.">
 		</div>
 		<div class="rowhandler">
 			<label for="tel">Телефон:</label>
-			<input type="tel" id="tel" name="tel">
+			<input type="tel" id="tel" name="tel" placeholder="0991234567">
 		</div>
 		<div class="rowhandler">
 			<label for="idcard">ID-card:</label>
-			<input type="text" id="idcard" name="idcard">
+			<input type="text" id="idcard" name="idcard" placeholder="EX123456">
 		</div>
 		<div class="rowhandler">
 			<label for="birth">Дата народження:</label>
@@ -49,7 +27,7 @@
 		</div>
 		<div class="rowhandler">
 			<label for="email">Електронна пошта:</label>
-			<input type="email" id="email" name="email">
+			<input type="email" id="email" name="email" placeholder="example@gmail.com">
 		</div>
 		<button id="sendbutton">Відправити</button>
 	</form>
@@ -58,29 +36,5 @@
 		<p id="data"></p>
 	</div>
 </body>
-<script>
-	let sendbutton = document.getElementById("sendbutton");
-	document.addEventListener(sendbutton.click(), function () {
-		let name = document.getElementById("name").value;
-		let tel = document.getElementById("tel").value;
-		let idcard = document.getElementById("idcard").value;
-		let birth = document.getElementById("birth").value;
-		let email = document.getElementById("email").value;
-
-		let formData = {
-			name: name,
-			tel: tel,
-			idcard: idcard,
-			birth: birth,
-			email: email
-		};
-
-		localStorage.setItem("formData", JSON.stringify(formData));
-
-		console.log(name, tel, idcard, birth, email);
-		let data = document.getElementById("data");
-		data.innerText = `ПІБ: ${name}, Телефон: ${tel}, ID-card: ${idcard}, Дата народження: ${birth}, Електронна пошта: ${email}`;
-	});
-</script>
-
+<script src="scripts.js"></script>
 </html>

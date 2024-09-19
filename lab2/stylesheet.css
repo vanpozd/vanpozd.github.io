@@ -23,3 +23,93 @@ td {
 	background-color: #048f8f;
 	color: #0A0C00;
 }
+/* position */
+.piccontainer {
+	background-color: rgb(214, 240, 240);
+}
+.piccenter {
+	border-radius: 50%;
+	top: 150px;
+	left: 80px;
+	width: 40px;
+	height: 40px;
+	background-color: black;
+	position: absolute;
+}
+.picelem1 {
+	border-radius: 50%;
+	top: 140px;
+	left: 70px;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	position: absolute;
+}
+.picelem2 {
+	border-radius: 50%;
+	top: 130px;
+	left: 60px;
+	width: 80px;
+	height: 80px;
+	background-color: black;
+	position: absolute;
+}
+.rectvrt{
+	top: 124px;
+	left: 98px;
+	width: 4px;
+	height: 90px;
+	background-color: black;
+	position: absolute;
+}
+.rectgrs{
+	top: 168px;
+	left: 54px;
+	width: 92px;
+	height: 4px;
+	background-color: black;
+	position: absolute;
+}
+/* transform */
+.crosshair {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 10px solid black; /* Outer circle */
+    border-radius: 50%;
+    margin: 50px auto;
+}
+
+.crosshair::before,
+.crosshair::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+}
+
+.crosshair::before {
+    width: 10px;
+    height: 150%;
+    left: 50%;
+    top: -25%;
+    transform: translateX(-50%);
+}
+
+.crosshair::after {
+    width: 150%;
+    height: 10px;
+    top: 50%;
+    left: -25%;
+    transform: translateY(-50%);
+}
+
+.crosshair .inner-circle {
+    position: absolute;
+    width: 40px; /* Inner circle size */
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

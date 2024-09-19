@@ -1,0 +1,33 @@
+.maincont {
+    width: 100%;
+}
+
+.img1 {
+    width: 25%;
+    height: 100px;
+    float: left;
+    text-align: center;
+    background-color: aqua;
+    margin: 0;
+}
+
+.text1 {
+    height: 100px;
+    text-align: center;
+    background-color: aquamarine;
+    margin: 0;
+}
+
+.img2 {
+    height: 100px;
+    text-align: center;
+    background-color: blueviolet;
+    margin: 0;
+}
+
+.text2 {
+    height: 100px;
+    text-align: center;
+    background-color: brown;
+    margin: 0;
+}
