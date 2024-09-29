@@ -3,7 +3,8 @@ let getdatabut = document.getElementById('getdata');
 var body = document.querySelector('body');
 
 getdatabut.addEventListener('click', () => {
-    userscont.style.display = 'block';
+    userscont.style.display = 'flex';
+    userscont.style.flexDirection = 'row';
         fetch('https://randomuser.me/api')
         .then(response => response.json())
         .then(data => {
