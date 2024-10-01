@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 sendbutton.addEventListener('click', () => {
-    if(/.+ .\.$/.test(name.value)){
+    if (/.+ .\..\.$/.test(name.value)) {
         localStorage.setItem('name', name.value);
     } else {
         alert('Некоректно введене ПІБ');
     }
-    if(/\d{10}$/.test(tel.value)){
+    if (/\d{10}$/.test(tel.value)) {
         localStorage.setItem('tel', tel.value);
     } else {
         alert('Некоректно введений телефон');
     }
-    if(/[A-Za-z]{2}[0-9]{6}$/.test(idcard.value)){
+    if (/[A-Za-z]{2}[0-9]{6}$/.test(idcard.value)) {
         localStorage.setItem('idcard', idcard.value);
     } else {
         alert('Некоректно введений ID-card');
     }
-    if(birth.value === '') {
+    if (birth.value === '') {
         alert('Введіть дату народження');
     } else {
         localStorage.setItem('birth', birth.value);
     }
-    if(/^[a-z0-9_%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email.value)){
+    if (/^[a-z0-9_%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email.value)) {
         localStorage.setItem('email', email.value);
     } else {
         alert('Некоректно введена електронна пошта');
